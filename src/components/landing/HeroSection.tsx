@@ -57,7 +57,7 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button variant="ctaGold" size="xl" asChild>
-            <a href="https://www.hotpepper.jp/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.hotpepper.jp/strJ000756270/" target="_blank" rel="noopener noreferrer">
               <Calendar className="mr-2 h-5 w-5" />
               Web予約はこちら
             </a>
