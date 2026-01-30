@@ -1,13 +1,11 @@
 import { MapPin, Phone, Clock, CreditCard, Users, Ban, Car, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const AccessSection = () => {
-  return (
-    <section id="access" className="bg-washi py-24">
+  return <section id="access" className="bg-washi py-24">
       <div className="container px-4">
         {/* Section Title */}
         <div className="mb-16 text-center">
-          <p className="mb-3 text-xs tracking-[0.3em] text-muted-foreground">ACCESS</p>
+          
           <h2 className="font-serif text-3xl font-medium tracking-wider text-foreground md:text-4xl">
             店舗情報・アクセス
           </h2>
@@ -17,17 +15,9 @@ const AccessSection = () => {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Map */}
           <div className="overflow-hidden border border-border">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.4!2d135.5350!3d34.7010!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7e3c7c0c0c1%3A0x0!2zMzTCsDQyJzAzLjYiTiAxMzXCsDMyJzA2LjAiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="風の街 京橋店 地図"
-              className="h-full min-h-[400px] w-full"
-            />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.4!2d135.5350!3d34.7010!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7e3c7c0c0c1%3A0x0!2zMzTCsDQyJzAzLjYiTiAxMzXCsDMyJzA2LjAiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="400" style={{
+            border: 0
+          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="風の街 京橋店 地図" className="h-full min-h-[400px] w-full" />
           </div>
 
           {/* Store Info */}
@@ -56,10 +46,7 @@ const AccessSection = () => {
                   <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
                     <p className="text-sm font-medium text-foreground">電話番号</p>
-                    <a
-                      href="tel:06-6353-9035"
-                      className="mt-1 inline-block font-serif text-lg text-primary hover:underline"
-                    >
+                    <a href="tel:06-6353-9035" className="mt-1 inline-block font-serif text-lg text-primary hover:underline">
                       06-6353-9035
                     </a>
                   </div>
@@ -135,8 +122,6 @@ const AccessSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AccessSection;
