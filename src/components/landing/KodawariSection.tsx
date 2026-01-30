@@ -1,4 +1,4 @@
-import storefront from "@/assets/storefront.png";
+import storefront from "@/assets/kyobashi-storefront.png";
 const KodawariSection = () => {
   const features = [{
     title: "鉄板焼のライブ感",
