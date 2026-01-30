@@ -23,7 +23,7 @@ const MenuSection = () => {
           </h2>
           <div className="section-divider mx-auto mt-6 w-16" />
           <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
-            豊富なメニューの中から一部をご紹介。すべて食べ放題でお楽しみいただけます。
+            どれから焼くか、迷う贅沢。私たちが磨き続けてきた全メニューを、心ゆくまで。
           </p>
         </div>
 
