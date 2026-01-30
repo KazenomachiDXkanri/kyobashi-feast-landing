@@ -1,4 +1,4 @@
-import { Phone, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroFood from "@/assets/hero-food.png";
 
@@ -48,15 +48,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button variant="cta" size="xl" asChild>
-            <a href="tel:06-6353-9035">
-              <Phone className="mr-2 h-5 w-5" />
-              今すぐ電話で予約
-            </a>
-          </Button>
-          <Button variant="ctaOutline" size="xl" className="border-white/60 text-white hover:bg-white/10" asChild>
             <a href="https://www.hotpepper.jp/strJ000756270/" target="_blank" rel="noopener noreferrer">
               <Calendar className="mr-2 h-5 w-5" />
               Web予約はこちら

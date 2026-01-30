@@ -81,8 +81,8 @@ const CourseSection = () => {
         {/* CTA */}
         <div className="mt-12 text-center">
           <Button variant="cta" size="lg" asChild>
-            <a href="tel:06-6353-9035">
-              コースの詳細を電話で確認する
+            <a href="https://www.hotpepper.jp/strJ000756270/" target="_blank" rel="noopener noreferrer">
+              Web予約はこちら
             </a>
           </Button>
         </div>
