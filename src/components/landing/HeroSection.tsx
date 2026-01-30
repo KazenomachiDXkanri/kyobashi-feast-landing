@@ -27,7 +27,7 @@ const HeroSection = () => {
         {/* Sub Copy */}
         <div className="mb-12 max-w-2xl space-y-3 text-base leading-relaxed tracking-wide text-white/90 md:text-lg">
           <p>創業66年。素材、技、心にこだわり抜いたお好み焼。</p>
-          <p>京橋店限定の全3種・食べ放題コースで、賑やかで温かな歓送迎会をプロデュースします。</p>
+          <p>京橋店限定の全3種・食べ放題コースで、<br />賑やかで温かな歓送迎会をプロデュースします。</p>
           <p className="text-white/70">3,300円から選べる、幹事様も安心のラインナップ。</p>
         </div>
 
