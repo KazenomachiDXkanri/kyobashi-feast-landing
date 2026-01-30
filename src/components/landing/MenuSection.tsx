@@ -27,7 +27,10 @@ const MenuSection = () => {
           </p>
         </div>
 
-        {/* Menu Categories */}
+        {/* Food Menu */}
+        <h3 className="mb-6 text-center font-serif text-xl font-medium tracking-wider text-foreground">
+          食べ放題メニュー
+        </h3>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category, index) => <div key={index} className="border-t border-primary/30 pt-6">
               {/* Category Header */}
