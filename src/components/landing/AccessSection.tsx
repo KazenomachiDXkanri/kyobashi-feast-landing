@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, CreditCard, Users, Ban, Car, Calendar } from "lucide-react";
+import { MapPin, Phone, Clock, CreditCard, Users, Ban, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const AccessSection = () => {
   return <section id="access" className="bg-washi py-24">
@@ -103,18 +103,11 @@ const AccessSection = () => {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button variant="cta" size="lg" className="flex-1" asChild>
-                  <a href="tel:06-6353-9035">
-                    <Phone className="mr-2 h-4 w-4" />
-                    電話で予約する
-                  </a>
-                </Button>
-                <Button variant="ctaOutline" size="lg" className="flex-1" asChild>
+              {/* CTA Button */}
+              <div className="mt-8">
+                <Button variant="cta" size="lg" className="w-full sm:w-auto" asChild>
                   <a href="https://www.hotpepper.jp/strJ000756270/" target="_blank" rel="noopener noreferrer">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    Web予約
+                    Web予約はこちら
                   </a>
                 </Button>
               </div>
