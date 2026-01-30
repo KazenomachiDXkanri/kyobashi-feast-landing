@@ -2,59 +2,61 @@ const MenuSection = () => {
   const categories = [
     {
       title: "お好み焼・ねぎ焼き",
-      icon: "🥞",
       items: ["豚玉", "いか玉", "えび玉", "豚もち玉", "豚ねぎ玉", "牛肉玉"],
-      accent: "border-l-primary",
     },
     {
       title: "モダン焼き・焼きそば",
-      icon: "🍜",
       items: ["豚モダン", "いかモダン", "焼きそば", "塩焼きそば", "にんにく醤油焼きそば", "焼うどん"],
-      accent: "border-l-kaze-gold",
     },
     {
       title: "もんじゃ焼き",
-      icon: "🔥",
       items: ["もちチーズもんじゃ", "Wチーズもんじゃ", "プルコギもんじゃ", "豚キムチもんじゃ", "海鮮もんじゃ", "ベビースターもんじゃ"],
-      accent: "border-l-kaze-wood",
     },
     {
       title: "鉄板焼・おつまみ",
-      icon: "🍳",
       items: ["とんぺい", "若鶏ねぎ塩鉄板焼", "げそ鉄板焼", "枝豆", "キムチ", "じゃがバター焼き"],
-      accent: "border-l-secondary",
     },
   ];
 
+  const drinks = [
+    "生ビール（中・小）",
+    "ハイボール",
+    "ゆずハイボール",
+    "レモンサワー",
+    "カルピスサワー",
+    "焼酎各種",
+    "カシス",
+    "ピーチ",
+    "冷酒",
+    "梅酒",
+  ];
+
   return (
-    <section id="menu" className="bg-background py-20">
+    <section id="menu" className="bg-background py-24">
       <div className="container px-4">
         {/* Section Title */}
-        <div className="mb-12 text-center">
-          <span className="mb-2 inline-block text-sm font-medium text-primary">MENU</span>
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl">
+        <div className="mb-16 text-center">
+          <p className="mb-3 text-xs tracking-[0.3em] text-muted-foreground">MENU</p>
+          <h2 className="font-serif text-3xl font-medium tracking-wider text-foreground md:text-4xl">
             主要メニュー紹介
           </h2>
-          <div className="section-divider mx-auto w-24" />
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          <div className="section-divider mx-auto mt-6 w-16" />
+          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
             豊富なメニューの中から一部をご紹介。すべて食べ放題でお楽しみいただけます。
           </p>
         </div>
 
         {/* Menu Categories */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category, index) => (
             <div
               key={index}
-              className={`rounded-xl border-l-4 ${category.accent} bg-card p-6 shadow-md transition-all duration-300 hover:shadow-xl`}
+              className="border-t border-primary/30 pt-6"
             >
               {/* Category Header */}
-              <div className="mb-4 flex items-center gap-3">
-                <span className="text-3xl">{category.icon}</span>
-                <h3 className="font-display text-lg font-bold text-card-foreground">
-                  {category.title}
-                </h3>
-              </div>
+              <h3 className="mb-4 font-serif text-lg font-medium tracking-wider text-foreground">
+                {category.title}
+              </h3>
 
               {/* Items */}
               <ul className="space-y-2">
@@ -63,7 +65,7 @@ const MenuSection = () => {
                     key={iIndex}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary/50" />
+                    <span className="h-1 w-1 flex-shrink-0 rounded-full bg-primary/50" />
                     {item}
                   </li>
                 ))}
@@ -76,32 +78,21 @@ const MenuSection = () => {
         </div>
 
         {/* Drink Menu Highlight */}
-        <div className="mt-12 rounded-2xl bg-kaze-black p-8 text-center">
-          <h3 className="mb-4 font-display text-2xl font-bold text-kaze-cream">
-            🍺 飲み放題メニュー
+        <div className="mt-16 border border-border bg-card p-8">
+          <h3 className="mb-6 text-center font-serif text-xl font-medium tracking-wider text-foreground">
+            飲み放題メニュー
           </h3>
-          <div className="flex flex-wrap justify-center gap-3 text-sm text-kaze-cream/80">
-            {[
-              "生ビール（中・小）",
-              "ハイボール",
-              "ゆずハイボール",
-              "レモンサワー",
-              "カルピスサワー",
-              "焼酎各種",
-              "カシス",
-              "ピーチ",
-              "冷酒",
-              "梅酒",
-            ].map((drink, index) => (
+          <div className="flex flex-wrap justify-center gap-3">
+            {drinks.map((drink, index) => (
               <span
                 key={index}
-                className="rounded-full border border-kaze-gold/30 bg-kaze-gold/10 px-3 py-1"
+                className="border border-border bg-background px-4 py-2 text-sm text-muted-foreground"
               >
                 {drink}
               </span>
             ))}
           </div>
-          <p className="mt-4 text-xs text-kaze-cream/50">
+          <p className="mt-6 text-center text-xs text-muted-foreground">
             ※3,800円・4,400円コースにてお楽しみいただけます
           </p>
         </div>
