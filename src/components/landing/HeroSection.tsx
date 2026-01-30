@@ -16,10 +16,6 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="container relative z-10 flex min-h-[90vh] flex-col items-center justify-center px-4 py-20 text-center">
-        {/* Badge */}
-        <div className="mb-8 inline-flex items-center gap-2 border border-white/30 bg-black/30 px-5 py-2 backdrop-blur-sm">
-          <span className="font-serif text-sm tracking-wider text-white">歓送迎会予約受付中</span>
-        </div>
 
         {/* Main Copy */}
         <h1 className="mb-6 font-serif text-4xl font-medium leading-tight tracking-wider text-white md:text-5xl lg:text-6xl">
