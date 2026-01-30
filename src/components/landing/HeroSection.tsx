@@ -1,6 +1,6 @@
 import { Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroSignage from "@/assets/hero-signage.png";
+import heroFood from "@/assets/hero-food.png";
 
 const HeroSection = () => {
   return (
@@ -8,11 +8,11 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src={heroSignage}
-          alt="風の街 京橋店 看板"
-          className="h-full w-full object-cover"
+          src={heroFood}
+          alt="鉄板焼のお好み焼き"
+          className="h-full w-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-kaze-black/50 via-transparent to-kaze-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-kaze-black/60 via-kaze-black/30 to-kaze-black/70" />
       </div>
 
       {/* Content */}
