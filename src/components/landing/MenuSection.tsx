@@ -12,7 +12,7 @@ const MenuSection = () => {
     title: "鉄板焼・おつまみ",
     items: ["とんぺい", "若鶏ねぎ塩鉄板焼", "げそ鉄板焼", "枝豆", "キムチ", "じゃがバター焼き"]
   }];
-  const drinks = ["生ビール（中・小）", "ハイボール", "ゆずハイボール", "レモンサワー", "カルピスサワー", "焼酎各種", "カシス", "ピーチ", "冷酒", "梅酒"];
+  const drinks = ["生ビール", "ハイボール", "サワー", "梅酒", "芋・麦焼酎", "冷酒", "カクテル", "ソフトドリンク"];
   return <section id="menu" className="bg-background py-24">
       <div className="container px-4">
         {/* Section Title */}
