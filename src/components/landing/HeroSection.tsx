@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="container relative z-10 flex min-h-[90vh] flex-col items-center justify-center px-4 py-20 text-center">
 
         {/* Main Copy */}
-        <h1 className="mb-6 font-serif text-4xl font-medium leading-tight tracking-wider text-white md:text-5xl lg:text-6xl">
+        <h1 className="mb-6 font-serif text-3xl font-medium leading-tight tracking-wider text-white md:text-4xl lg:text-5xl">
           受け継がれる<span className="text-primary">「風の街」</span>の味で、
           <br />
           大切な門出と出会いに、最高の一枚を。
