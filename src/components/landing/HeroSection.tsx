@@ -1,4 +1,3 @@
-import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroFood from "@/assets/hero-food.png";
 
@@ -24,44 +23,31 @@ const HeroSection = () => {
 
         {/* Main Copy */}
         <h1 className="mb-6 font-serif text-4xl font-medium leading-tight tracking-wider text-white md:text-5xl lg:text-6xl">
-          京橋での歓送迎会は
+          受け継がれる<span className="text-primary">「風の街」</span>の味で、
           <br />
-          <span className="text-primary">「風の街」</span>で決まり
+          大切な門出と出会いに、最高の一枚を。
         </h1>
 
         {/* Sub Copy */}
-        <p className="mb-10 max-w-xl text-base leading-relaxed tracking-wide text-white/90 md:text-lg">
-          秘伝の味を守り続けるお好み焼・鉄板焼。
-          <br className="hidden sm:block" />
-          全3コースの食べ放題で、思い出に残る宴会を。
-        </p>
-
-        {/* Course Highlight */}
-        <div className="mb-12 flex flex-wrap justify-center gap-6">
-          <div className="border border-white/30 bg-black/40 px-6 py-4 backdrop-blur-sm">
-            <p className="text-xs tracking-wider text-white/70">食べ放題</p>
-            <p className="font-serif text-2xl font-medium text-white">3,300円〜</p>
-          </div>
-          <div className="border border-primary/50 bg-black/40 px-6 py-4 backdrop-blur-sm">
-            <p className="text-xs tracking-wider text-primary">飲み放題付き</p>
-            <p className="font-serif text-2xl font-medium text-white">3,800円〜</p>
-          </div>
+        <div className="mb-12 max-w-2xl space-y-3 text-base leading-relaxed tracking-wide text-white/90 md:text-lg">
+          <p>創業66年。素材、技、心にこだわり抜いたお好み焼。</p>
+          <p>京橋店限定の全3種・食べ放題コースで、賑やかで温かな歓送迎会をプロデュースします。</p>
+          <p className="text-white/70">3,300円から選べる、幹事様も安心のラインナップ。</p>
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button variant="cta" size="xl" asChild>
             <a href="https://www.hotpepper.jp/strJ000756270/" target="_blank" rel="noopener noreferrer">
-              <Calendar className="mr-2 h-5 w-5" />
-              Web予約はこちら
+              京橋店を予約する
+            </a>
+          </Button>
+          <Button variant="ctaOutline" size="xl" className="border-white/60 text-white hover:bg-white/10" asChild>
+            <a href="#course">
+              コース詳細を見る
             </a>
           </Button>
         </div>
-
-        {/* Group Note */}
-        <p className="mt-8 text-sm tracking-wide text-white/60">
-          ※団体・大人数でのご利用も大歓迎！お気軽にご相談ください
-        </p>
       </div>
 
       {/* Scroll Indicator */}
