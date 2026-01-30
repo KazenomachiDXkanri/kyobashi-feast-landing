@@ -19,7 +19,7 @@ const HeroSection = () => {
 
         {/* Main Copy */}
         <h1 className="mb-6 font-serif text-3xl font-medium leading-tight tracking-wider text-white md:text-4xl lg:text-5xl">
-          受け継がれる<span className="text-primary">「風の街」</span>の味で、
+          受け継がれる<span className="font-bold text-primary">「風の街」</span>の味で、
           <br />
           大切な門出と出会いに、最高の一枚を。
         </h1>
