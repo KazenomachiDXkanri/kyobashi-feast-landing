@@ -1,4 +1,4 @@
-import { Check, Star, Crown } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CourseSection = () => {
@@ -7,7 +7,6 @@ const CourseSection = () => {
       name: "ベーシックコース",
       price: "3,300",
       description: "食べ放題",
-      icon: <Star className="h-6 w-6" />,
       popular: false,
       features: [
         "お好み焼き各種",
@@ -18,14 +17,11 @@ const CourseSection = () => {
         "おつまみ各種",
       ],
       drinks: false,
-      color: "border-kaze-wood",
-      bg: "bg-card",
     },
     {
       name: "スタンダードコース",
       price: "3,800",
       description: "食べ放題＋飲み放題",
-      icon: <Crown className="h-6 w-6" />,
       popular: true,
       features: [
         "お好み焼き各種",
@@ -37,14 +33,11 @@ const CourseSection = () => {
         "焼酎・カシス・ピーチ",
       ],
       drinks: true,
-      color: "border-primary",
-      bg: "bg-primary/5",
     },
     {
       name: "プレミアムコース",
       price: "4,400",
       description: "フル食べ放題＋全飲み放題",
-      icon: <Crown className="h-6 w-6" />,
       popular: false,
       features: [
         "全メニュー食べ放題",
@@ -55,64 +48,62 @@ const CourseSection = () => {
         "冷酒・梅酒も",
       ],
       drinks: true,
-      color: "border-kaze-gold",
-      bg: "bg-kaze-gold/10",
     },
   ];
 
   return (
-    <section id="course" className="bg-muted py-20">
+    <section id="course" className="bg-washi py-24">
       <div className="container px-4">
         {/* Section Title */}
-        <div className="mb-12 text-center">
-          <span className="mb-2 inline-block text-sm font-medium text-primary">COURSE</span>
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl">
+        <div className="mb-16 text-center">
+          <p className="mb-3 text-xs tracking-[0.3em] text-muted-foreground">COURSE</p>
+          <h2 className="font-serif text-3xl font-medium tracking-wider text-foreground md:text-4xl">
             選べる3つの食べ放題コース
           </h2>
-          <div className="section-divider mx-auto w-24" />
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          <div className="section-divider mx-auto mt-6 w-16" />
+          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
             お客様のご予算やお好みに合わせて、3つのコースからお選びいただけます。
           </p>
         </div>
 
         {/* Course Cards */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {courses.map((course, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-2xl border-2 ${course.color} ${course.bg} p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+              className={`relative bg-card p-8 transition-all hover-lift ${
+                course.popular 
+                  ? "border-2 border-primary" 
+                  : "border border-border"
+              }`}
             >
               {/* Popular Badge */}
               {course.popular && (
-                <div className="absolute -right-8 top-6 rotate-45 bg-primary px-10 py-1 text-xs font-bold text-primary-foreground shadow-md">
-                  一番人気
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary px-4 py-1">
+                  <span className="text-xs font-medium tracking-wider text-primary-foreground">
+                    一番人気
+                  </span>
                 </div>
               )}
 
-              {/* Icon */}
-              <div
-                className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full ${
-                  course.popular ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"
-                }`}
-              >
-                {course.icon}
+              {/* Course Name */}
+              <div className="mb-6 pt-2 text-center">
+                <h3 className="font-serif text-xl font-medium tracking-wider text-foreground">
+                  {course.name}
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">{course.description}</p>
               </div>
 
-              {/* Course Name */}
-              <h3 className="mb-1 font-display text-xl font-bold text-foreground">{course.name}</h3>
-              <p className="mb-4 text-sm text-muted-foreground">{course.description}</p>
-
               {/* Price */}
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-foreground">{course.price}</span>
-                <span className="text-lg text-muted-foreground">円</span>
-                <span className="text-sm text-muted-foreground">（税込）</span>
+              <div className="mb-8 text-center">
+                <span className="font-serif text-4xl font-medium text-foreground">{course.price}</span>
+                <span className="ml-1 text-sm text-muted-foreground">円（税込）</span>
               </div>
 
               {/* Features */}
-              <ul className="mb-6 space-y-2">
+              <ul className="space-y-3">
                 {course.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-start gap-2 text-sm">
+                  <li key={fIndex} className="flex items-start gap-3 text-sm">
                     <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
                     <span className="text-foreground">{feature}</span>
                   </li>
@@ -121,8 +112,10 @@ const CourseSection = () => {
 
               {/* Drink Badge */}
               {course.drinks && (
-                <div className="mb-4 inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                  🍺 アルコール飲み放題付き
+                <div className="mt-6 border-t border-border pt-4 text-center">
+                  <span className="text-xs tracking-wider text-primary">
+                    アルコール飲み放題付き
+                  </span>
                 </div>
               )}
             </div>
@@ -132,7 +125,7 @@ const CourseSection = () => {
         {/* CTA */}
         <div className="mt-12 text-center">
           <Button variant="cta" size="lg" asChild>
-            <a href="tel:06-6354-2909">
+            <a href="tel:06-6353-9035">
               コースの詳細を電話で確認する
             </a>
           </Button>

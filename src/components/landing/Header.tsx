@@ -1,20 +1,36 @@
-import { Phone } from "lucide-react";
+import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-border/50 bg-kaze-black/95 backdrop-blur-md">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-kaze-black/90 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <img src={logo} alt="風の街" className="h-10 w-auto" />
-          <span className="ml-2 text-xs font-normal text-kaze-cream/60">京橋店</span>
+          <img src={logo} alt="風の街" className="h-8 w-auto" />
+          <span className="ml-3 font-serif text-sm tracking-widest text-white/70">京橋店</span>
         </a>
+
+        {/* Navigation - Desktop */}
+        <nav className="hidden items-center gap-8 md:flex">
+          <a href="#kodawari" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            こだわり
+          </a>
+          <a href="#course" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            コース
+          </a>
+          <a href="#menu" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            メニュー
+          </a>
+          <a href="#access" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            アクセス
+          </a>
+        </nav>
 
         {/* CTA Button */}
         <Button variant="cta" size="sm" asChild>
-          <a href="tel:06-6354-2909">
+          <a href="tel:06-6353-9035">
             <Phone className="mr-1 h-4 w-4" />
             予約する
           </a>

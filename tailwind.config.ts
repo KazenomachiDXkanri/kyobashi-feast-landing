@@ -7,18 +7,19 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: "1.5rem",
       screens: {
         sm: "640px",
         md: "768px",
         lg: "1024px",
-        xl: "1200px",
+        xl: "1100px",
       },
     },
     extend: {
       fontFamily: {
         sans: ["Noto Sans JP", "sans-serif"],
-        display: ["Zen Maru Gothic", "Noto Sans JP", "sans-serif"],
+        serif: ["Noto Serif JP", "serif"],
+        display: ["Noto Serif JP", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -78,10 +79,6 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
@@ -90,11 +87,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        shimmer: "shimmer 2s linear infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
   },
