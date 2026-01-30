@@ -31,7 +31,7 @@ const MenuSection = () => {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category, index) => <div key={index} className="border-t border-primary/30 pt-6">
               {/* Category Header */}
-              <h3 className="mb-4 font-serif text-lg font-medium tracking-wider text-foreground">
+              <h3 className="mb-4 font-serif text-lg font-medium tracking-wider text-primary">
                 {category.title}
               </h3>
 
