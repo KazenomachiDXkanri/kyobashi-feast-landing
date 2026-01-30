@@ -1,17 +1,27 @@
 import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
-
 const Header = () => {
-  return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-kaze-black/90 backdrop-blur-sm">
+  return <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-kaze-black/90 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <a href="#" className="flex items-center">
-          <img src={logo} alt="風の街" className="h-8 w-auto" />
-          <span className="ml-3 font-serif text-sm tracking-widest text-white/70">京橋店</span>
-        </a>
+        
 
+        {/* Navigation - Desktop */}
+        <nav className="hidden items-center gap-8 md:flex">
+          <a href="#kodawari" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            こだわり
+          </a>
+          <a href="#course" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            コース
+          </a>
+          <a href="#menu" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            メニュー
+          </a>
+          <a href="#access" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
+            アクセス
+          </a>
+        </nav>
 
         {/* CTA Button */}
         <Button variant="cta" size="sm" asChild>
@@ -21,8 +31,6 @@ const Header = () => {
           </a>
         </Button>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
