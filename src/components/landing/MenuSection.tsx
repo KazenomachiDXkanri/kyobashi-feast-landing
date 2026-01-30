@@ -58,7 +58,7 @@ const MenuSection = () => {
                 {drink}
               </span>)}
           </div>
-          <p className="mt-6 text-center text-xs text-muted-foreground">
+          <p className="mt-6 text-center text-sm text-muted-foreground">
             ※3,800円・4,400円コースにてお楽しみいただけます
           </p>
         </div>
