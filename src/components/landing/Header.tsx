@@ -12,21 +12,6 @@ const Header = () => {
           <span className="ml-3 font-serif text-sm tracking-widest text-white/70">京橋店</span>
         </a>
 
-        {/* Navigation - Desktop */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <a href="#kodawari" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
-            こだわり
-          </a>
-          <a href="#course" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
-            コース
-          </a>
-          <a href="#menu" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
-            メニュー
-          </a>
-          <a href="#access" className="text-sm tracking-wider text-white/80 transition-colors hover:text-white">
-            アクセス
-          </a>
-        </nav>
 
         {/* CTA Button */}
         <Button variant="cta" size="sm" asChild>
